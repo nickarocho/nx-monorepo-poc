@@ -1,3 +1,3 @@
 export function cat(): string {
-  return 'cat';
+  return `Hi, I'm Cat 🐈`;
 }

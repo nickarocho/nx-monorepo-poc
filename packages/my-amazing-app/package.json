@@ -1,0 +1,5 @@
+{
+  "name": "@nx-monorepo-poc/my-amazing-app",
+  "version": "0.0.1",
+  "type": "commonjs"
+}

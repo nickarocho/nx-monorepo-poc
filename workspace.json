@@ -3,6 +3,7 @@
   "projects": {
     "cat": "packages/cat",
     "core": "packages/core",
-    "dog": "packages/dog"
+    "dog": "packages/dog",
+    "my-amazing-app": "packages/my-amazing-app"
   }
 }

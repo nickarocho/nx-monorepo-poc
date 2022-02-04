@@ -1,3 +1,3 @@
 export function dog(): string {
-  return 'dog';
+  return `Hi, I'm Dog 🐩`;
 }

@@ -1,0 +1,39 @@
+{
+  "root": "packages/my-amazing-app",
+  "sourceRoot": "packages/my-amazing-app/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/my-amazing-app",
+        "main": "packages/my-amazing-app/src/index.ts",
+        "tsConfig": "packages/my-amazing-app/tsconfig.app.json",
+        "assets": ["packages/my-amazing-app/*.md"]
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/js:node",
+      "options": {
+        "buildTarget": "my-amazing-app:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/my-amazing-app/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/my-amazing-app"],
+      "options": {
+        "jestConfig": "packages/my-amazing-app/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
