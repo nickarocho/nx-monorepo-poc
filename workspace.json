@@ -1,4 +1,8 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "cat": "packages/cat",
+    "core": "packages/core",
+    "dog": "packages/dog"
+  }
 }

@@ -1,0 +1,33 @@
+{
+  "root": "packages/dog",
+  "sourceRoot": "packages/dog/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/dog",
+        "main": "packages/dog/src/index.ts",
+        "tsConfig": "packages/dog/tsconfig.lib.json",
+        "assets": ["packages/dog/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/dog/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/dog"],
+      "options": {
+        "jestConfig": "packages/dog/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
